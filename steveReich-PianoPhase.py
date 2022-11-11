@@ -3,7 +3,7 @@
 ## Extended to full score from
 ## https://git.sr.ht/~marcevanstein/music.py/tree/master/item/musicShort7.py
 ## by M. Selim Yavuz
-## 2022-11-10
+## 2022-11-11
 ###############################################################################
 from scamp import * # for all the playing
 import numpy as np # for math stuff
@@ -66,12 +66,13 @@ def holding(session, section_hld, piano1, piano2, melody_1, melody_2, repeatMin,
 
 ###################################MAIN FUNC###################################
 def main():
-    # session with a soundfont with better piano and a nice tempo
+    ## session with a soundfont with better piano and a nice tempo
     session = Session(tempo = tempo1,
                         default_soundfont = "Essential Keys-sforzando-v9.6.sf2")
+    # soundfont: https://drive.google.com/file/d/1VZkoiVOonffpJWxZah-AdQkxaTFIzZ6q/view?usp=sharing
     # s.print_default_soundfont_presets() # see what's in the font
-    session.fast_forward_in_beats(1900) ## REMOVE THIS, FOR TEST PURPOSES ONLY
-    # two pianos with a nice concert grand sound
+    # session.fast_forward_in_beats(1900) ## REMOVE THIS, FOR TEST PURPOSES ONLY
+    ## two pianos with a nice concert grand sound
     piano1 = session.new_part("Yamaha C5 Grand")
     piano2 = session.new_part("Yamaha C5 Grand")
 
